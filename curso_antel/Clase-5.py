@@ -135,3 +135,39 @@ Lista de palabras que aparecen en ambas listas.
 # lista2 = ["Panadero","Padre","Madre","Coca","Perro"]
 
 # compara_listas(lista1,lista2)
+
+#Ejercicio 5
+'''
+Ejercicio 5:
+    
+  A - Escribe una función llamada "duplicado" que tome una lista y devuelva True si tiene algún 
+elemento duplicado.
+La función no debe modificar la lista.
+
+B - Crear una función que genere una lista de 23 números aleatorios del 1 al 100 y
+comprobar con la función anterior si existen elementos duplicados.
+'''
+# import random
+
+# def duplicado(lista):
+#     duplicado = False
+#     comparador = []
+#     for x in lista:
+#         if x in comparador:
+#             duplicado = True
+#         else:
+#             comparador.append(x)
+#             print(comparador)
+#     if duplicado == True:
+#         print ("Duplicado")
+#         return True
+#     elif duplicado == False:
+#         print ("No hay duplicados")
+#         return False
+
+# lista=[]
+# for n in range(0,23):
+#     y = random.randrange(0,100)
+#     lista.append(y)
+
+# duplicado(lista)
