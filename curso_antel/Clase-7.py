@@ -11,18 +11,18 @@ Deberá mostrar: { ’Hola’: [’don Pepito’, ’don Jose’], ’Buenos’:
 
 -----------------------------------------
 '''
-def diccionario(lista):
-    diccionario = {}
-    for dato in lista:
-        if dato[0] not in diccionario:
-            diccionario.update({dato[0]:[dato[1]]})
-        elif dato[0] in diccionario:
-            diccionario[dato[0]].append(dato[1])
+# def diccionario(lista):
+#     diccionario = {}
+#     for dato in lista:
+#         if dato[0] not in diccionario:
+#             diccionario.update({dato[0]:[dato[1]]})
+#         elif dato[0] in diccionario:
+#             diccionario[dato[0]].append(dato[1])
 
-    print(diccionario)
+#     print(diccionario)
 
-lista = [("Hola","Don Pepito"),("Hola","Don José"),("Buenos", "Días")]
-diccionario(lista)
+# lista = [("Hola","Don Pepito"),("Hola","Don José"),("Buenos", "Días")]
+# diccionario(lista)
 
 '''
 Ejercicio 2
@@ -34,6 +34,14 @@ Ejemplo:
 {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100, 11: 121, 12: 144, 
 13: 169, 14: 196, 15: 225}
 '''
+# def diccionario(numero):
+#     diccionario = {}
+#     lista = range(1,numero+1)
+#     for n in lista:
+#         diccionario.update({n:n*n})
+#     print(diccionario)
+
+# diccionario(10)
 
 '''
 Ejercicio 3
@@ -47,3 +55,4 @@ b) Escribir una función que cuente la cantidad de apariciones de cada caracter 
 y los devuelva en un diccionario.
 
 '''
+
