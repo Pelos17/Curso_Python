@@ -90,3 +90,4 @@ luego la inicial con un punto, y luego el apellido.
 # lista = [("Vignolo","Juan","M"),("Pedroncino","Gloria","S"),("Vignolo","Mario","G")]
 
 # nombres(lista)
+
