@@ -77,14 +77,15 @@ y devuelva una lista de strings donde cada uno contenga, primero el nombre,
 luego la inicial con un punto, y luego el apellido.
 -------------------------------------------------
 '''
+def nombres(lista):
+    nueva_lista = []
+    for persona in lista:
+        datos = str(persona[1] + " " + persona[2] + "." + " " + persona[0])
+        nueva_lista.append(datos)
+    print(nueva_lista)
+    return(nueva_lista)
+    
 
-# nueva_lista = []
-# def nombres(lista):
-#     for persona in lista:
-#         datos = str(persona[1] + " " + persona[2] + "." + " " + persona[0])
-#         nueva_lista.append(datos)
-#     print(nueva_lista)
+lista = [("Vignolo","Juan","M"),("Pedroncino","Gloria","S"),("Vignolo","Mario","G")]
 
-# lista = [("Vignolo","Juan","M"),("Pedroncino","Gloria","S"),("Vignolo","Mario","G")]
-
-# nombres(lista)
+nombres(lista)
