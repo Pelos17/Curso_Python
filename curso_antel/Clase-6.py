@@ -5,24 +5,24 @@ menor a mayor o no  (pueden usar las funciones max y min, pero cuidado,
 no se pueden comparar tipos diferentes).
 --------------------------------------------------
 '''
-def ordenados(tupla):
-    ordenado = False
-    comparador = 0
-    for x in tupla:
-        if x > comparador:
-            ordenado = True
-            comparador = x
-        elif x < comparador:
-            ordenado = False
-            break
-    if ordenado == True:
-        print("Tupla Ordenada")
-    elif ordenado == False:
-        print ("Tupla Desordenada")
+# def ordenados(tupla):
+#     ordenado = False
+#     comparador = 0
+#     for x in tupla:
+#         if x > comparador:
+#             ordenado = True
+#             comparador = x
+#         elif x < comparador:
+#             ordenado = False
+#             break
+#     if ordenado == True:
+#         print("Tupla Ordenada")
+#     elif ordenado == False:
+#         print ("Tupla Desordenada")
 
-tupla1 = (10,23,45,60)
-tupla2 = (23,24,21,56)
-ordenados (tupla1)
+# tupla1 = (10,23,45,60)
+# tupla2 = (23,24,21,56)
+# ordenados (tupla1)
 
 '''
 Ejercicio 2. Dominó.
