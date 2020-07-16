@@ -55,4 +55,34 @@ b) Escribir una función que cuente la cantidad de apariciones de cada caracter 
 y los devuelva en un diccionario.
 
 '''
+#a
+# def contador(cadena):
+#     diccionario = {}
+#     cadena = cadena.lower()
+#     lista = cadena.split()
+#     for x in lista:
+#         contador = 0
+#         for y in lista:
+#             if x == y:
+#                 contador = contador + 1
+#         diccionario.update({x:contador})
+#     print (diccionario)
 
+# cadena = "Que lindo dia que hace hoy"
+# contador(cadena)
+
+#b
+# def contador(cadena):
+#     diccionario = {}
+#     cadena = cadena.lower()
+#     lista = list(cadena)
+#     for x in lista:
+#         contador = 0
+#         for y in lista:
+#             if x == y:
+#                 contador = contador + 1
+#         diccionario.update({x:contador})
+#     print (diccionario)
+
+# cadena = "Que lindo dia que hace hoy"
+# contador(cadena)
