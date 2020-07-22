@@ -71,6 +71,9 @@
 
 '''Ejercicio 3: Dar el resultado de sumar todos los números primos del 1 al 1000'''
 
+
+
+
 '''
 Ejercicio 4 
 
