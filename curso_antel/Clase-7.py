@@ -55,7 +55,7 @@ b) Escribir una función que cuente la cantidad de apariciones de cada caracter 
 y los devuelva en un diccionario.
 
 '''
-#a
+# a
 # def contador(cadena):
 #     diccionario = {}
 #     cadena = cadena.lower()
@@ -67,11 +67,11 @@ y los devuelva en un diccionario.
 #                 contador = contador + 1
 #         diccionario.update({x:contador})
 #     print (diccionario)
-
+#
 # cadena = "Que lindo dia que hace hoy"
 # contador(cadena)
-
-#b
+#
+# b
 # def contador(cadena):
 #     diccionario = {}
 #     cadena = cadena.lower()
@@ -83,6 +83,7 @@ y los devuelva en un diccionario.
 #                 contador = contador + 1
 #         diccionario.update({x:contador})
 #     print (diccionario)
-
+#
 # cadena = "Que lindo dia que hace hoy"
 # contador(cadena)
+
