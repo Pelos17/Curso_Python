@@ -124,4 +124,13 @@ Matriz resultado:
 #     lista.append(len(palabra))
 #     return lista
 #
-# print(list(map(listas,cadena.split())))
+# def lower(palabra):
+#     return palabra.lower()
+#
+# def uper(palabra):
+#     return palabra.upper()
+
+
+#print(list(map(listas,cadena.split())))
+#print(list(zip(map(lower,cadena.split()),map(uper,cadena.split()),map(len,cadena.split()))))
+
