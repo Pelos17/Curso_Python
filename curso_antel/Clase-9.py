@@ -70,9 +70,18 @@
 # print(list(map(lambda p:len(p),list(oracion.split()))))
 
 '''Ejercicio 3: Dar el resultado de sumar todos los números primos del 1 al 1000'''
-
-
-
+# listaprimos = []
+# for i in range(2,100):
+#     creciente = 2
+#     esPrimo = True
+#     while esPrimo and creciente < i:
+#         if i%creciente == 0:
+#             esPrimo = False
+#         else:
+#             creciente += 1
+#     if esPrimo:
+#             listaprimos.append(i)
+# print(sum(listaprimos))
 
 '''
 Ejercicio 4 
@@ -101,5 +110,12 @@ Matriz resultado:
 [“ESTO”, “esto”, 4],
 [“ES”, “es”, 2], ….
 '''
+cadena = 'Hola esto es Python en Antel'
+def listas(palabra):
+    lista = []
+    lista.append(palabra.upper())
+    lista.append(palabra.lower())
+    lista.append(len(palabra))
+    return lista
 
-#Me faltan terminar de la segunda parte: 3,5
+print(list(map(listas,cadena.split())))
