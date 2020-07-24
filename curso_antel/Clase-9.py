@@ -129,8 +129,17 @@ Matriz resultado:
 #
 # def uper(palabra):
 #     return palabra.upper()
+#
+#
+# print(list(map(listas,cadena.split())))
+# print(list(zip(map(uper,cadena.split()),map(lower,cadena.split()),map(len,cadena.split()))))
 
+'''
+Ejercicio 6:
+Utilizando una función lambda y la función reduce, escribir una función que tome una lista y devuelva la lista sin repetidos
+'''
+import functools
 
-#print(list(map(listas,cadena.split())))
-#print(list(zip(map(lower,cadena.split()),map(uper,cadena.split()),map(len,cadena.split()))))
+lista = ['Hola','Mundo','Pedro','Mundo','Caja','Pedro']
 
+print(functools.reduce(lambda a,b: a if b[0] in a else a+b, list(map(lambda x: [x] ,lista))))
