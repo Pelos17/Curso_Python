@@ -89,6 +89,11 @@
 #
 # print(functools.reduce(lambda x,y:y+x,primos()))
 
+#Profe con lista por comprension
+# tope=1001
+# primes = [num for num in range(tope) if 0 not in [num%i for i in range(2,num)]]  
+# print(functools.reduce(lambda x, y: x+y, primes))
+
 '''
 Ejercicio 4 
 
@@ -124,15 +129,12 @@ Matriz resultado:
 #     lista.append(len(palabra))
 #     return lista
 #
-# def lower(palabra):
-#     return palabra.lower()
-#
-# def uper(palabra):
-#     return palabra.upper()
-#
-#
 # print(list(map(listas,cadena.split())))
-# print(list(zip(map(uper,cadena.split()),map(lower,cadena.split()),map(len,cadena.split()))))
+
+#Profesor
+# words = 'The quick brown fox jumps over the lazy dog'.split()
+ 
+# stuff = [[w.upper(), w.lower(), len(w)] for w in words]
 
 '''
 Ejercicio 6:
@@ -143,3 +145,7 @@ Utilizando una función lambda y la función reduce, escribir una función que t
 # lista = ['Hola','Mundo','Pedro','Mundo','Caja','Pedro']
 #
 # print(functools.reduce(lambda a,b: a if b[0] in a else a+b, list(map(lambda x: [x] ,lista))))
+
+hola = "Cualquiera este metodo".split()
+
+print(hola)
