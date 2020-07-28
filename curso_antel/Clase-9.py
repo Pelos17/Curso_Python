@@ -146,6 +146,6 @@ Utilizando una función lambda y la función reduce, escribir una función que t
 #
 # print(functools.reduce(lambda a,b: a if b[0] in a else a+b, list(map(lambda x: [x] ,lista))))
 
-hola = "Cualquiera este metodo".split()
-
-print(hola)
+#Profesor
+# lista = [1, 2, 2, 3, 3, 3, 4, 3]
+# print(functools.reduce(lambda x, y: x + [y] if not y in x else x, lista, []))
