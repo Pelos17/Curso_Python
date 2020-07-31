@@ -47,21 +47,11 @@
 
 #Generadores
 
-entrada = [1,12,22,124,"1Hola",[1,2,3],True,33]
+# entrada = [1,12,22,124,"1Hola",[1,2,3],True,33]
  
-filtro_enteros = (x for x in entrada if isinstance(x,int))
-filtro_pares = (x for x in filtro_enteros if x%2==0)
-final = (x for x in filtro_pares if str(x)[0] =="1")
-#cadena = (str(x) for x in filtro_pares)
-#comenienza_en_1: (x for x in cadena if x[0]=="1")
+# filtro_enteros = (x for x in entrada if isinstance(x,int))
+# filtro_pares = (x for x in filtro_enteros if x%2==0)
+# final = (x for x in filtro_pares if str(x)[0] =="1")
 
-for x in final:
-    print(x)
-
-entrada = [1,12,124,22,"1Hola",[1,2,3],True,33]
-
-
-
-
-
-
+# for x in final:
+#     print(x)
