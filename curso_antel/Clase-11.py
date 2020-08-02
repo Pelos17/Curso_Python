@@ -32,3 +32,38 @@
 
 
 # ejercicio2()
+
+#Ejercicio 3
+
+# import datetime
+#
+# def ejercicio3(archivo,texto):
+#     with open(archivo,"a") as archivo:
+#         archivo.write("\n")
+#         archivo.write(texto)
+#         archivo.write(" ")
+#         archivo.write(str(datetime.datetime.now()))
+#
+#Profe
+
+# def guarda_en_log(archivo,texto):
+#     with open(archivo,"a") as log:
+#         #log.writelines([texto,' ',str(datetime.datetime.now()),"\n"])
+#         log.write(f'{texto} {datetime.datetime.now()} \n')
+
+# ejercicio3("archivo","Prueba 3")
+s
+
+#Ejercicio 4
+
+'''Usando la biblioteca glob, leer de un directorio todos los archivos llamados notas_dddd.txt, donde dddd son 4 dígitos que representan un año.
+El formato de estos archivos es:
+nombre_alumno; nota
+nombre_alumno; nota
+
+....
+
+nombre_alumno; nota
+Se deben imprimir los promedios por año,  y el promedio general de notas.
+'''
+
