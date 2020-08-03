@@ -72,7 +72,7 @@ Se deben imprimir los promedios por año,  y el promedio general de notas.
 
 # import glob
 #
-# archivos = glob.glob('./notas/notas_*')
+# archivos = glob.glob('./notas/notas_[0-9][0-9][0-9][0-9]')
 # total = []
 # for x in archivos:
 #     año = str(x)
@@ -82,12 +82,11 @@ Se deben imprimir los promedios por año,  y el promedio general de notas.
 #         for y in alumnos:
 #             y = int(y[-2:])
 #             suma = suma+y
-#         total.append(suma/len(alumnos))
+#             total.append(y)
 #         print('Promedio año {}:{}'.format(año[-4:],suma/len(alumnos)))
 # suma_total = 0
 # for n in total:
 #     suma_total = suma_total + n
 # print("El promedio total es:",suma_total/len(total))
-
 
 
