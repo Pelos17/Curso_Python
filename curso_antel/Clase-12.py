@@ -3,18 +3,18 @@
 #     def __init__(self, v, m):
 #         self.valor = v
 #         self.mensaje = m
-#
+
 #     # la clase Test tiene 2 atributos, valor y mensaje
 #     # cada vez que creo un objeto de esta clase le
 #     # debo pasar datos para esos 2 atributos, que se #almacenan gracias al constructor
-#
+
 #     def __str__(self):
-#         return self.valor + ", " + self.mensaje
-#
-#
+#         return str(self.valor) + ", " + self.mensaje
+
+
 # o1 = Test(56, "pepe")
 # o2 = Test(9898, "Holaquetal")
-#
+
 # print(o1.valor)  # 56
 # print(o2.mensaje)  # "Holaquetal"
 # print(o1)
@@ -40,14 +40,20 @@ TENERMOS QUE FORZAR ERRORES
 '''
 
 def operador(n1,n2):
+    #try:
     with open('./curso_antel/operadores','r') as archivo:
         archivo = archivo.read().splitlines()
+        contador = 0
         print("Se ingresaron los numeros {} y {}.".format(n1,n2))
         print("El resultado de las operacioens es:")
         for x in archivo:
             cadena = str(n1) + x + str(n2)
             print("Operacion:",x)
-            print(eval(cadena))
+            contador = contador + 1
+            try:
+                print(eval(cadena))
+            except SyntaxError as e:
+                print('Se ingreso un operador incompatible y se genero un error {} debido a la operacion {} ingresada en la linea {} del archivo de operadores.'.format(type(e),x,contador))
 
 
 operador(420,69)
