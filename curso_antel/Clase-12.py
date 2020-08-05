@@ -38,22 +38,47 @@ de línea, operación problemática y motivo del error. '''
 INTERPRETAR EL STRING COMO OPERADOR, USAR EVAL
 TENERMOS QUE FORZAR ERRORES
 '''
+# class ErrorOperador(Exception):
+#     def __init__ (self,valor,mensaje):
+#         self.mensaje = mensaje
+#         self.valor = valor
+#     def __str__(self):
+#         return str("Linea {}.Error:{}".format(self.valor,self.mensaje))
 
-def operador(n1,n2):
-    #try:
-    with open('./curso_antel/operadores','r') as archivo:
-        archivo = archivo.read().splitlines()
-        contador = 0
-        print("Se ingresaron los numeros {} y {}.".format(n1,n2))
-        print("El resultado de las operacioens es:")
-        for x in archivo:
-            cadena = str(n1) + x + str(n2)
-            print("Operacion:",x)
-            contador = contador + 1
-            try:
-                print(eval(cadena))
-            except SyntaxError as e:
-                print('Se ingreso un operador incompatible y se genero un error {} debido a la operacion {} ingresada en la linea {} del archivo de operadores.'.format(type(e),x,contador))
+# Con este edito SyntaxError
+# def operador(n1,n2):
+#     with open('./curso_antel/operadores','r') as archivo:
+#         archivo = archivo.read().splitlines()
+#         contador = 0
+#         print("Se ingresaron los numeros {} y {}.".format(n1,n2))
+#         print("El resultado de las operacioens es:")
+#         for x in archivo:
+#             cadena = str(n1) + x + str(n2)
+#             print("Operacion:",x)
+#             contador = contador + 1
+#             try:
+#                 print(eval(cadena))
+#             except SyntaxError as e:
+#                 print('Se ingreso un operador incompatible y se genero un error {} debido a la operacion {} ingresada en la linea {} del archivo de operadores.'.format(type(e),x,contador))
+
+#Uso mi error
+# def operador(n1,n2):
+#     with open('./curso_antel/operadores','r') as archivo:
+#         archivo = archivo.read().splitlines()
+#         contador = 0
+#         print("Se ingresaron los numeros {} y {}.".format(n1,n2))
+#         print("El resultado de las operacioens es:")
+#         for x in archivo:
+#             cadena = str(n1) + x + str(n2)
+#             print("Operacion:",x)
+#             contador = contador + 1
+#             if x not in ["/","*","-","+"]:
+#                 raise ErrorOperador(contador,"Operador incorrecto")
+#             else:
+#                 print(eval(cadena))
 
 
-operador(420,69)
+# operador(420,69)
+
+import sys
+print(sys.path)
