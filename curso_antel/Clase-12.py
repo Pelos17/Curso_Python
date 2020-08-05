@@ -79,6 +79,3 @@ TENERMOS QUE FORZAR ERRORES
 
 
 # operador(420,69)
-
-import sys
-print(sys.path)
