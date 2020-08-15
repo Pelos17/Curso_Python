@@ -1,92 +1,57 @@
-#Ejercicio 1
-# def ejercicio1():
-#     archivo_usuario = input("Ingrese la ubicacion del archivo:")
-#     numero = int(input("Ingrese el numero:"))
-#     with open (archivo_usuario,"r") as archivo:
-#         archivo = archivo.readlines()
-#         if numero > len(archivo):
-#             for x in archivo:
-#                 print(x)
-#         else:
-#             for x in archivo[0:numero]:
-#                 print(x)
-# Profe
-# def lectura_primeros_n(archivo,n):
-#     with open(archivo,"r") as archivo:
-#         for x in range(n):
-#             print(archivo.readline())
-# ejercicio1()
+# def square(x):
+#     print("Cuadrado de ",format(x))
+#     return x*x
 
-#Ejercicio 2
+# def digit_sum(x):
+#     print("Suma de digitos de ",format(x))
+#     return sum(map(int, str(x)))
 
-# def ejercicio2():
-#     archivo_usuario = input("Ingrese la ubicacion del archivo:")
-#     copia = archivo_usuario + "_copia"
-#     with open (archivo_usuario,"r") as archivo:
-#         archivo = archivo.read()
-#         print("Archivo original")
-#         print(archivo)
-#         print("*"*40)
-        
-#     with open(copia,"w") as archivo2:
-#         archivo2.write(archivo)
-#     with open(copia,"r") as archivo3:
-#         print("copia del archivo")
-#         print(archivo3.read())
+# numbers = range(1,6)
+# squares = (square(n) for n in numbers)
+# print(squares)
 
+# dsums = (digit_sum(n) for n in squares)
 
-# ejercicio2()
+# for n in dsums:
+#     print(n)
 
-#Ejercicio 3
+#Ejercicio Generadores
+#Solucion con funcion traducional
 
-# import datetime
-#
-# def ejercicio3(archivo,texto):
-#     with open(archivo,"a") as archivo:
-#         archivo.write("\n")
-#         archivo.write(texto)
-#         archivo.write(" ")
-#         archivo.write(str(datetime.datetime.now()))
-#
-#Profe
+# def ejercicio(lista):
+#     nueva_lista = []
+#     for x in lista:
+#         if type(x) == int and x%2 == 0:
+#             nueva_lista.append(x)
+#     for y in nueva_lista:
+#         if str(y)[0] == "1":
+#             print(y)
 
-# def guarda_en_log(archivo,texto):
-#     with open(archivo,"a") as log:
-#         #log.writelines([texto,' ',str(datetime.datetime.now()),"\n"])
-#         log.write(f'{texto} {datetime.datetime.now()} \n')
+#ejercicio(entrada)
 
-# ejercicio3("archivo","Prueba 3")
+#Dos funciones
+# def pares(lista):
+#     nueva_lista = []
+#     for x in lista:
+#         if type(x) == int and x%2 == 0:
+#             nueva_lista.append(x)
+#     return nueva_lista
+            
 
-#Ejercicio 4
+# def filtro(lista):
+#     for y in lista:
+#         if str(y)[0] == "1":
+#             print(y)
 
-'''Usando la biblioteca glob, leer de un directorio todos los archivos llamados notas_dddd.txt, donde dddd son 4 dígitos que representan un año.
-El formato de estos archivos es:
-nombre_alumno; nota
-nombre_alumno; nota
+# filtro(pares(entrada))
 
-....
+#Generadores
 
-nombre_alumno; nota
-Se deben imprimir los promedios por año,  y el promedio general de notas.
-'''
+# entrada = [1,12,22,124,"1Hola",[1,2,3],True,33]
+ 
+# filtro_enteros = (x for x in entrada if isinstance(x,int))
+# filtro_pares = (x for x in filtro_enteros if x%2==0)
+# final = (x for x in filtro_pares if str(x)[0] =="1")
 
-# import glob
-#
-# archivos = glob.glob('./notas/notas_[0-9][0-9][0-9][0-9]')
-# total = []
-# for x in archivos:
-#     año = str(x)
-#     with open(x,"r") as x:
-#         alumnos = x.readlines()
-#         suma = 0
-#         for y in alumnos:
-#             y = int(y[-2:])
-#             suma = suma+y
-#             total.append(y)
-#         print('Promedio año {}:{}'.format(año[-4:],suma/len(alumnos)))
-# suma_total = 0
-# for n in total:
-#     suma_total = suma_total + n
-# print("El promedio total es:",suma_total/len(total))
-
-
+# for x in final:
+#     print(x)
