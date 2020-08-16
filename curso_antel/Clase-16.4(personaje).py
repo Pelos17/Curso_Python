@@ -19,12 +19,15 @@ class personaje():
         if self.vida <= 0:
             print("Lo mataste")
 
-    #def 
+    def mover(self,movimiento):
+        self.movimiento = movimiento
+        self.posicion = [movimiento[0] + self.velocidad, movimiento[1] + self.velocidad,]
+        print("Posicion Actual",self.posicion)
 
 
 
-roge = personaje(10,6,[10,4])
 
+roge = personaje(10,6,[0,0])
 
 roge.recibir_ataque(11)
-print(roge.vida)
+roge.mover([10,15])
