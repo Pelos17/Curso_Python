@@ -79,3 +79,18 @@ tribonacci([1,1,1],10)
 # cadena = "Hola Mundo"
 
 # cifrar(cadena)
+
+
+#Ejercicio 6
+import re
+def bebidas(cadena):
+    lista_bebidas = []
+    patron = re.compile('[1-9]')
+    for i in cadena:
+        if patron.match(i):
+            lista_bebidas.append(int(i))
+    print("Deberia tomar {} basos de agua.".format(sum(lista_bebidas)))
+
+
+cadena = "2 tragos, 1 ceveza, 4 copas de vino,9 botellas de vodka"
+bebidas(cadena)
