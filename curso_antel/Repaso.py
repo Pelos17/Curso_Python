@@ -95,8 +95,27 @@ cifrar("ABECEDARIO")
 decifrar("7B535D7249")
 '''
 #Ejercicio 5
-
-
+'''
+#DefaultList
+class DefaultList(list):
+    def __init__(self,lst,default):
+        super().__init__(lst)
+        self.lst = lst
+    self.default = default
+ 
+def __getitem__(self,index):
+    if index < len(self.lst) and index >= -len(self.lst):
+        return self.lst[index]
+    else:
+        return self.default
+ 
+ 
+l = ["hola", 3]
+dl = DefaultList(l, -1)
+ 
+print(dl[0]) # hola
+print(dl[2]) #-1
+'''
 
 #Ejercicio 6
 '''
