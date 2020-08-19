@@ -64,24 +64,42 @@ tribonacci([1,1,1],10)
 '''
 
 #Ejercicio 4
+'''
+with open("clave.txt",'r') as clave:
+    clave = clave.read()
+    clave = list(clave)
 
-# with open("clave.txt",'r') as clave:
-#     clave = clave.read()
-#     clave = list(clave)
-# def cifrar(cadena):
-#     cadena = list(cadena)
+def cifrar(cadena):
+    cifrado = []
+    cadena = list(cadena)
+    for x in cadena:
+        if x in clave:
+            cifrado.append(clave.index(x))
+        else:
+            cifrado.append(x)
+    print ("".join(str(e)for e in cifrado))
+    return "".join(str(e)for e in cifrado)
     
 
-# def decifrar(cadena):
-#     pass
+def decifrar(cadena):
+    decifrado = []
+    for x in cadena:
+        if x.isdigit() == True:
+            decifrado.append(clave[int(x)])
+        else:
+            decifrado.append(x)
+    print ("".join(str(e)for e in decifrado))
+    return "".join(str(e)for e in decifrado)
 
+cifrar("ABECEDARIO")
+decifrar("7B535D7249")
+'''
+#Ejercicio 5
 
-# cadena = "Hola Mundo"
-
-# cifrar(cadena)
 
 
 #Ejercicio 6
+'''
 import re
 def bebidas(cadena):
     lista_bebidas = []
@@ -94,3 +112,4 @@ def bebidas(cadena):
 
 cadena = "2 tragos, 1 ceveza, 4 copas de vino,9 botellas de vodka"
 bebidas(cadena)
+''' 
