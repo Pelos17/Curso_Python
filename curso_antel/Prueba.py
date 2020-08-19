@@ -46,8 +46,22 @@ print(o1 + o2) # salida: Buenas tardes que tal
 #Ejercicio 4
 '''
 class InmutableList(list):
-'''
+    def __init__(self,lista):
+        self.lista = lista
+    def __str__(self):
+        return "{}".format(self.lista)
+    def __setitem__(self,key,value):
+        raise InmutableListTypeError
 
+class InmutableListTypeError(Exception):
+        def __str__(self):
+            return "InmutableList es un objeto inmutable"
+
+lista = InmutableList([1,2,3,4])
+
+print(lista)
+lista[0] = 3
+'''
 
 #Ejercicio 5
 #solo compare si el archivo existe y sobvrescribo el mensaje de File not found. Adjunto mi archivo de ejemplo.
