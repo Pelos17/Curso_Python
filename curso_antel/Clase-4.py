@@ -17,10 +17,10 @@ Ejercicio 5
 Escribir una función que reciba un entero n y represente un triángulo isósceles con sus dos lados 
 iguales de largo n,
 '''
-# def isoceles(largo):
-#     for x in range(largo+1):
-#         print("*"*x)
-#     for y in range(largo-1,0,-1):
-#         print("*"*y)
+def isoceles(largo):
+    for x in range(largo+1):
+        print("*"*x)
+    for y in range(largo-1,0,-1):
+        print("*"*y)
 
-# isoceles(10)
+isoceles(10)
